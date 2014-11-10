@@ -11,44 +11,61 @@ namespace RaknaSiffror
         static void Main(string[] args)
         {
             // Variabler
-            int number;
+            int number = 0;
             int count = 0;
+            string myString;
 
             // Skriv in ett tal
             Console.Write("Mata in ett heltal: ");
             number = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Nollor: {0}", Zero(number, count));
+            myString = number.ToString();
 
-            Console.WriteLine("Udda: {0}", OddNumbers(number, count));
+            Console.WriteLine("Nollor: {0}", Zero(number, count, myString));
 
-            Console.WriteLine("Jämna: {0}", EvenNumbers(number, count));
-            // Räkna ut antal udda siffror
+            Console.WriteLine("Udda: {0}", OddNumbers(number, count, myString));
 
-
-            
+            Console.WriteLine("Jämna: {0}", EvenNumbers(number, count, myString));   
         }
+        
         // Räkna ut antal nollor
-        static int Zero(int number, int count)
+        static int Zero(int number, int count, string myString)
         {
-            string myString = number.ToString();
             count = myString.Split('0').Length - 1;
             return count;
         }
 
         // Räkna ut antal udda siffror
-        // Källa: http://stackoverflow.com/questions/19482500/how-to-loop-through-an-array-thats-been-created-from-user-input-c-sharp
+        static int OddNumbers(int number, int count, string myString)
+        {
+            count = myString.Split('1', '3', '5', '7', '9').Length - 1;
+            return count;
+        }
+
+        // Räkna ut antal udda siffror
+        static int EvenNumbers(int number, int count, string myString)
+        {
+            count = myString.Split('2', '4', '6', '8').Length - 1;
+            return count;
+        }
+
+
+        /*
+        // Räkna ut antal udda siffror
+        // Obsolet källa: http://stackoverflow.com/questions/19482500/how-to-loop-through-an-array-thats-been-created-from-user-input-c-sharp
+        // Källa: https://www.physicsforums.com/threads/converting-integer-into-array-of-single-digits-in-c.558588/
         static int OddNumbers(int number, int count)
         {
-            count = 0;
-            foreach (int i in SplitNumber(number))
+            int[] digits = number.ToString().ToCharArray().Select(Convert.ToInt32).ToArray();
+
+            for (int i = 0; i > digits.Length; i++)
             {
-                if (i % 2 == 0 && i != 0)
+                if(digits[i] % 2 == 0)
                 {
-                    ++count;
+                    count++;
                 }
             }
-            return count;
+                return count;
         }
 
         // Räkna ut antal jämna
@@ -57,6 +74,7 @@ namespace RaknaSiffror
             throw new NotImplementedException();
         }
 
+        /*
         // Delar upp talet i enskilda siffror
         // Källa http://stackoverflow.com/questions/4808612/how-to-split-a-number-into-individual-digits
         static int[] SplitNumber(int number)
@@ -69,7 +87,8 @@ namespace RaknaSiffror
             }
             list.Reverse();
             return list.ToArray();
-           
         }
+         */
+       
     }
 }

@@ -4,3 +4,9 @@ C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\bin\Debug\Rakna
 C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.csprojResolveAssemblyReference.cache
 C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.exe
 C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.pdb
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.exe.config
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.exe
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.pdb
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.csprojResolveAssemblyReference.cache
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.exe
+C:\Users\Holmewi\Documents\ud14\1id404\1dv404-jh222qr-laborationer\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.pdb
