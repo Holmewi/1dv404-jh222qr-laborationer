@@ -1,0 +1,6 @@
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.exe.config
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.exe
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\bin\Debug\RaknaSiffror.pdb
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.csprojResolveAssemblyReference.cache
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.exe
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaSiffror\RaknaSiffror\obj\Debug\RaknaSiffror.pdb

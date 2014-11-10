@@ -1,0 +1,6 @@
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\bin\Debug\RaknaA.exe.config
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\bin\Debug\RaknaA.exe
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\bin\Debug\RaknaA.pdb
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\obj\Debug\RaknaA.csprojResolveAssemblyReference.cache
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\obj\Debug\RaknaA.exe
+C:\Users\Holmewi\Documents\ud14\1id404\RaknaA\RaknaA\obj\Debug\RaknaA.pdb
