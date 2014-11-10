@@ -11,6 +11,30 @@ namespace RaknaA
     {
         static void Main(string[] args)
         {
+            string line;
+            int count = 0;
+            char char1;
+            char char2;
+
+            Console.Write("Mata in en textrad: ");
+            line = Console.ReadLine();
+
+            Console.Write("\nSkriv in bokstav 1: ");
+            char1 = Char.Parse(Console.ReadLine());
+
+            Console.Write("Skriv in bokstav 2: ");
+            char2 = Char.Parse(Console.ReadLine());
+
+            //Källa: http://stackoverflow.com/questions/541954/how-would-you-count-occurrences-of-a-string-within-a-string
+            count = line.Count(c => c == char1);
+            Console.WriteLine("\nAntal {0}: {1}", char1, count);
+
+            count = line.Count(c => c == char2);
+            Console.WriteLine("Antal {0}: {1}", char2, count);
+
+
+
+            /*
             // Variabler
             string line;
             char uppecase = 'A';
@@ -50,6 +74,7 @@ namespace RaknaA
             {
                 Console.WriteLine("Det finns inga bokstäver som stämmer överens");
             }
+             */
 
             
 
