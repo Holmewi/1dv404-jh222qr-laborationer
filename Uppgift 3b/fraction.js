@@ -1,19 +1,18 @@
 "use strict"
 
 window.onload = function(){
-    var getNumerator = document.querySelector("#input-numerator");
-    var getDominator = document.querySelector("#input-denominator");
+    var numerator = document.querySelector("#input-numerator");
+    var dominator = document.querySelector("#input-denominator");
     
     var p = document.querySelector("#value");
-    
+
     var submit = document.querySelector("#submit");
     
     submit.addEventListener("click", function(evt){ 
         evt.preventDefault();
-        var numerator = parseInt(getNumerator.value);
-        var dominator = parseInt(getDominator.value);
-        var myFraction = new Fraction(numerator, dominator);
-        p.innerHTML = "Ditt bråktal är: " + numerator + "/" + dominator;
+        
+        var newFraction = new Fraction(numerator.value, dominator.value);
+        p.innerHTML = "Ditt bråktal är: " + numerator.value + "/" + dominator.value;
         
     });
     
@@ -21,9 +20,17 @@ window.onload = function(){
     
 };
 
-function Fraction(T, N) {
-    console.log(T);
-    console.log(N);
-
+function Fraction(numerator, dominator) {
+    var getNumerator = parseInt(numerator);     // Täljaren
+    var getDominator = parseInt(dominator);     // Nämnaren
+    var p = document.querySelector("#value");
+    
+    console.log(getNumerator);
+    console.log(getDominator);
+    
+    if (getDominator === 0){
+        p.innerHTML = "Nämnaren får inte vara 0!"
+        throw new Error("Nämnaren får inte vara 0!");
+    }
 };
 
