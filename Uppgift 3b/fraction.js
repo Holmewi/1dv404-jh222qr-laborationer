@@ -33,7 +33,7 @@ function Fraction(T, N) {
 }
 
 // Metoder
-Fraction.prototype.isNegative = function() {
+Fraction.prototype.isNegative = function () {
 	if (this.getNumerator() < 0 || this.getDenominator() < 0) {
 	    return true;
 	} else {
@@ -42,12 +42,14 @@ Fraction.prototype.isNegative = function() {
 };
     
 Fraction.prototype.add = function (testFraction) {
-    var addedNumerator = this.getNumerator() * testFraction.getDenominator() + testFraction.getNumerator() * this.getDenominator();
-    var addedDenominator = this.getDenominator() * testFraction.getDenominator();
-    return new Fraction(addedNumerator, addedDenominator);
+    this.getNumerator = this.getNumerator() * testFraction.getDenominator() + testFraction.getNumerator() * this.getDenominator();
+    this.getDenominator = this.getDenominator() * testFraction.getDenominator();
 };
     
-
+Fraction.prototype.multiply = function (testFraction) {
+	this.getNumerator = this.getNumerator() * testFraction.getNumerator();
+	this.getDenominator = this.getDenominator() * testFraction.getDenominator();
+};
 
 
 
@@ -73,9 +75,20 @@ submit.addEventListener("click", function(evt){
     
 // Testobject
 
-var newFraction = new Fraction(-3, 3);
+var newFraction = new Fraction(2, 3);
 var testFraction = new Fraction(5, 2);
-console.log(newFraction.getNumerator());
-console.log(newFraction.getDenominator());
+var addedFraction = new Fraction();
+
+console.log(newFraction);
+console.log(newFraction.getNumerator() + "/" + newFraction.getDenominator());
 console.log(newFraction.isNegative());
-console.log(newFraction.add());
+console.log(testFraction.getNumerator() + "/" + testFraction.getDenominator());
+
+
+/*
+newFraction.add(testFraction);
+console.log(newFraction);
+*/
+
+newFraction.multiply(testFraction);
+console.log(newFraction);
