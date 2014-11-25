@@ -51,7 +51,13 @@ Fraction.prototype.multiply = function (testFraction) {
 	this.getDenominator = this.getDenominator() * testFraction.getDenominator();
 };
 
-
+Fraction.prototype.isEqualTo = function(testFraction) {
+	if (this.getNumerator() / this.getDenominator() === testFraction.getNumerator() / testFraction.getDenominator()) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 
 
@@ -76,19 +82,21 @@ submit.addEventListener("click", function(evt){
 // Testobject
 
 var newFraction = new Fraction(2, 3);
-var testFraction = new Fraction(5, 2);
+var testFraction = new Fraction(4, 7);
 var addedFraction = new Fraction();
 
 console.log(newFraction);
 console.log(newFraction.getNumerator() + "/" + newFraction.getDenominator());
 console.log(newFraction.isNegative());
+console.log(newFraction.isEqualTo(testFraction));
 console.log(testFraction.getNumerator() + "/" + testFraction.getDenominator());
-
 
 /*
 newFraction.add(testFraction);
 console.log(newFraction);
 */
 
+/*
 newFraction.multiply(testFraction);
 console.log(newFraction);
+*/
