@@ -42,21 +42,27 @@ Fraction.prototype.isNegative = function () {
 };
     
 Fraction.prototype.add = function (testFraction) {
-    this.getNumerator = this.getNumerator() * testFraction.getDenominator() + testFraction.getNumerator() * this.getDenominator();
-    this.getDenominator = this.getDenominator() * testFraction.getDenominator();
+    var addedNumerator = this.getNumerator() * testFraction.getDenominator() + testFraction.getNumerator() * this.getDenominator();
+    var addedDenominator = this.getDenominator() * testFraction.getDenominator();
+    return new Fraction(addedNumerator, addedDenominator);
 };
     
 Fraction.prototype.multiply = function (testFraction) {
-	this.getNumerator = this.getNumerator() * testFraction.getNumerator();
-	this.getDenominator = this.getDenominator() * testFraction.getDenominator();
+	var multipliedNumerator = this.getNumerator() * testFraction.getNumerator();
+	var multipliedDenominator = this.getDenominator() * testFraction.getDenominator();
+	return new Fraction(multipliedNumerator, multipliedDenominator);
 };
 
-Fraction.prototype.isEqualTo = function(testFraction) {
+Fraction.prototype.isEqualTo = function (testFraction) {
 	if (this.getNumerator() / this.getDenominator() === testFraction.getNumerator() / testFraction.getDenominator()) {
 		return true;
 	} else {
 		return false;
 	}
+}
+
+Fraction.prototype.toString = function () {
+	return this.getNumerator() + " / " + this.getDenominator();
 }
 
 
@@ -79,24 +85,20 @@ submit.addEventListener("click", function(evt){
 });
 */
     
-// Testobject
+// Testobjekt
 
 var newFraction = new Fraction(2, 3);
 var testFraction = new Fraction(4, 7);
-var addedFraction = new Fraction();
-
-console.log(newFraction);
+/*
+console.log(newFraction.toString());
 console.log(newFraction.getNumerator() + "/" + newFraction.getDenominator());
 console.log(newFraction.isNegative());
 console.log(newFraction.isEqualTo(testFraction));
 console.log(testFraction.getNumerator() + "/" + testFraction.getDenominator());
-
-/*
-newFraction.add(testFraction);
-console.log(newFraction);
 */
 
-/*
-newFraction.multiply(testFraction);
-console.log(newFraction);
-*/
+var addedFraction = newFraction.add(testFraction);
+console.log(addedFraction.toString());
+
+var multipliedFraction = newFraction.multiply(testFraction);
+console.log(multipliedFraction.toString());
