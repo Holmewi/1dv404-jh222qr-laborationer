@@ -69,36 +69,46 @@ Fraction.prototype.toString = function () {
 
     
     
-    
+var output = "";
 var numerator = document.querySelector("#input-numerator");
 var dominator = document.querySelector("#input-denominator");
 var p = document.querySelector("#value");
 var submit = document.querySelector("#submit");
     
-// Mitt egna object
-/*
+
+//var newFraction = new Fraction(2, 3);
+var testFraction = new Fraction(4, 7);                                              // Programmets object
+
 submit.addEventListener("click", function(evt){ 
     evt.preventDefault();
-    var newFraction = new Fraction(+numerator.value, +dominator.value);
-    p.innerHTML = "Ditt bråktal är: " + numerator.value + "/" + dominator.value;
-    console.log(newFraction);
-});
-*/
+    var newFraction = new Fraction(+numerator.value, +dominator.value);             // Mitt egna object
     
-// Testobjekt
+    
+    p.innerHTML += "<p>Ditt bråktal är: " + newFraction.toString() + ".</p>";
+    p.innerHTML += "<p>Programmets bråktal är: " + testFraction.toString() + ".</p>";
+    p.innerHTML += "<p>isNegative: " + newFraction.isNegative() + ".</p>";
+    
+    var addedFraction = newFraction.add(testFraction);
+    p.innerHTML += "<p>Addera: " + newFraction.toString() + " + " + testFraction.toString() + " = " + addedFraction.toString() + ".</p>";
+    
+    var multipliedFraction = newFraction.multiply(testFraction);
+    p.innerHTML += "<p>Multiplicera: " + newFraction.toString() + " + " + testFraction.toString() + " = " + multipliedFraction.toString() + ".</p>";
+    
+    p.innerHTML += "<p>isEqualTo: " + newFraction.isEqualTo(testFraction) + ".</p>";
+});
 
-var newFraction = new Fraction(2, 3);
-var testFraction = new Fraction(4, 7);
+
+
+// Testobjekt
 /*
 console.log(newFraction.toString());
-console.log(newFraction.getNumerator() + "/" + newFraction.getDenominator());
 console.log(newFraction.isNegative());
 console.log(newFraction.isEqualTo(testFraction));
-console.log(testFraction.getNumerator() + "/" + testFraction.getDenominator());
-*/
+console.log(testFraction.toString());
 
 var addedFraction = newFraction.add(testFraction);
 console.log(addedFraction.toString());
 
 var multipliedFraction = newFraction.multiply(testFraction);
 console.log(multipliedFraction.toString());
+*/
