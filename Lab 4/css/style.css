@@ -1,0 +1,134 @@
+h1, h2 {
+	padding: 20px;
+	display: inline-box;
+	font-size: 20px;
+	margin-bottom: 25px;
+	background-color: gray;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
+hr {
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+.inputTitle {
+	display: inline-block;
+	width: 120px;
+	text-align: right;
+	margin-right: 20px;
+}
+
+#userDiv {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+    width: 50%;
+}
+
+#adminDiv {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+    width: 50%;
+    box-shadow: 2px 0 0 0 gray inset;
+}
+
+#userInterface, #adminInterface {
+    width: 85%;
+    height: 400px;
+    margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.test {
+	/*
+	width: 85%;
+	height: 30%;
+	*/
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.error {
+	border: 2px dotted red;
+}
+
+#error {
+	display: none;
+	border: 2px dotted red;
+	padding: 20px;
+}
+
+#loader {
+	display: inline-box;
+	text-align: center;
+}
+
+#loader span {
+	margin-top: 80px;
+	width: 300px;
+	text-align: center;
+}
+
+#loader img {
+}
+
+#loader p {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.font18 {
+	font-size: 18px;
+}
+
+.font14 {
+	font-size: 14px;
+}
+
+/* Admin Interface */
+.teamTitle {
+	display: inline-block;
+	width: 100px;
+	font-weight: 600;
+}
+
+.teamInfo {
+	
+}
+
+/* Admin Interface */
+table {
+	width: 100%;
+	background-color: gray;
+}
+
+table input {
+	width: 45px;
+}
+
+table, th, td {
+	border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+}
