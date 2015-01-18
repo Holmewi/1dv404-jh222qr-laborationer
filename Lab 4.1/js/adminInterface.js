@@ -4,7 +4,7 @@ var LEAGUE = LEAGUE || {};
 LEAGUE.Admin = {
     
     renderTeam : function(team){
-        testcases();
+        
     },
     
     renderGymnasts : function(team){

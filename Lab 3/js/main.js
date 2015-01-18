@@ -162,8 +162,12 @@ var Main = {
         var gymnastAddedScore = 0;
         var gymnastMediumScore = 0;
 
-        pointsArray.sort();
-        pointsArray.reverse();
+        function sortNumber(a,b) {
+            return a - b;
+        }
+
+        pointsArray.sort(sortNumber);
+        //pointsArray.reverse();
         console.log(pointsArray);
         
         // Tar bort den högsta och lägsta poängen

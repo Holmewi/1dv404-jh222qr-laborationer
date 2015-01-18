@@ -62,10 +62,8 @@ LEAGUE.User = {
         LEAGUE.User.submit.onclick = function(){
             console.log("Gymnasts added!");
             LEAGUE.User.submit.disabled = true;
-            //testcase2();
             LEAGUE.User.validate(error, team);
             LEAGUE.User.submit.disabled = false;
-            
         };
         
     },
@@ -113,20 +111,13 @@ LEAGUE.User = {
     },
     
     validate : function(error, team){
-        //clear();
-        
-        
+        clear();
         testcase2();
-        
-            
-        
-        
 
         
         var memberReg = document.getElementsByClassName("memberReg");
 
         for(var i = 0; i <  memberReg.length; i += 1){
-            
             memberReg[i].setAttribute('class', 'memberReg');
             for(var j = 1; j <= LEAGUE.User.count; j += 1){
                 if(memberReg[i].id === 'surname' + j){
@@ -186,7 +177,7 @@ LEAGUE.User = {
         error.style.display = "none";
         error.innerHTML = "";
         }
-
+        
         
         if(LEAGUE.User.valid === true){
             for(var h = 1; h <= LEAGUE.User.count; h += 1){

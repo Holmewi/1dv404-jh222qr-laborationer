@@ -28,8 +28,8 @@ LEAGUE.Start = {
         var fn = form.elements["teamName"];
         
         fn.focus();
-        button.onclick = function(e){
-            e.preventDefault();
+        button.onclick = function(){
+            //e.preventDefault();
             LEAGUE.Start.validate(error);
         };
     },
@@ -41,10 +41,10 @@ LEAGUE.Start = {
         LEAGUE.Start.city = document.getElementById('city').value;
         LEAGUE.Start.phone = document.getElementById('phone').value;
         LEAGUE.Start.teamEmail = document.getElementById('teamEmail').value;
- 
-        //clear();
+        
+        clear();
         testcase1();
-
+        
         
         var teamId = LEAGUE.Start.teams.length || 0;
         
