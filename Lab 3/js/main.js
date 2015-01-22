@@ -67,7 +67,7 @@ var Main = {
             }
             //Team.prototype.gymnasts(Main.gymnasts);
             //console.log(Team.prototype.getGymnasts());
-            Main.team = new Team(teamName, Main.teamId, Main.numberOfGymnasts, Main.gymnasts);
+            Main.team = new Team(teamName, Main.teamId, Main.gymnasts);
             Main.teams.push(Main.team);
             console.log(Main.team.getName());
             Main.gymnasts = [];
@@ -245,9 +245,9 @@ var Main = {
             
             h3.innerHTML = Main.teams[id].getName();
             
-            console.log(Main.team.getAmount());
+            console.log(Main.teams[id].getGymnasts().length);
             
-            for(var j = 0; j < Main.team.getAmount(); j += 1){
+            for(var j = 0; j < Main.teams[id].getGymnasts().length; j += 1){
                 var p = document.createElement("p");
                 div.appendChild(p);
                 //p.innerHTML = Main.teams[i].gymnasts[j].getName() + ": ";
@@ -256,8 +256,7 @@ var Main = {
                 
                 
                 p.innerHTML = Main.teams[id].getGymnasts()[j].getName() + " : ";
-                console.log(Gymnast.prototype.point[j]);
-                p.innerHTML += Main.teams[id].getGymnasts()[j].getScore()[j];
+                p.innerHTML += Main.teams[id].getGymnasts()[j].getScore();
             }
             
             var teamScore = document.createElement("p");
