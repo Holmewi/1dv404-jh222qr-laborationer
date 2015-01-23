@@ -52,7 +52,13 @@ function CalcTeamPnt(teamGymnasts){
         var gold, silver, bronze;
         
         teamGymnasts.forEach(function(member, index){
-			scores[index] = member.point; 
+			scores[index] = member.point;
+			if (member.point < 0) {
+			    throw new Error("Point is to low");
+			}
+			if (member.point > 10) {
+			    throw new Error("Point is to high");
+			}
 		}); 
 		
 		function sortNumber(a,b) {
@@ -91,9 +97,10 @@ function CalcTeamPnt(teamGymnasts){
         
         points = {teamPnt : teamPnt, gold : gold, silver : silver, bronze : bronze};
         
-        return points;
+        
     }
 	catch(error){
 		console.log(error.message); 
 	}
+	return points;
 }
